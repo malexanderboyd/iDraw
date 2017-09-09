@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">iDraw</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_change_brush_width">Brush Width</string>
+    <string name="btn_change_color">Color</string>
+    <string name="brush_width_size_label">Size:</string>
+    <string name="btn_clear">Clear Canvas</string>
+    <string name="options_title">Drawing Options</string>
+    <string name="color_picker_title">Choose your color</string>
+    <string name="brush_width_change_title">Modify Brush Width</string>
+    <string name="quote_1">We don\'t make mistakes. We have happy accidents.</string>
+    <string name="quote_2">No pressure. Just relax and watch it happen.</string>
+    <string name="quote_3">Every day is a good day when you paint.</string>
+    <string name="quote_4">You can do anything you want to do. This is your world.</string>
+    <string name="quote_5">Perhaps paint some happy little trees?</string>
+</resources>
