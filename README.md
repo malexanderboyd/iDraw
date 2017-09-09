@@ -1,14 +1,15 @@
 
-#iDraw
+# iDraw
 
-##Native drawing app using MVVM design pattern.
+## Native drawing app using MVVM design pattern.
 
 
-####External Resources Used:
+#### External Resources Used:
 
-#colorpicker - https://android.googlesource.com/platform/frameworks/opt/colorpicker, https://materialdoc.com/components/pickers/#color-picker
+[colorpicker](https://android.googlesource.com/platform/frameworks/opt/colorpicker)
+[resource](https://materialdoc.com/components/pickers/#color-picker)
 
-#####References:
+##### References:
 
 (For using Canvas/Paint/Path)
-- https://android.googlesource.com/platform/development/+/master/samples/ApiDemos/src/com/example/android/apis/graphics/FingerPaint.java
+[res](https://android.googlesource.com/platform/development/+/master/samples/ApiDemos/src/com/example/android/apis/graphics/FingerPaint.java)
