@@ -84,18 +84,18 @@ class PaintCanvasViewModel : ViewModel() {
                 ContextCompat.getColor(context,R.color.brown),
                 ContextCompat.getColor(context,R.color.grey),
                 ContextCompat.getColor(context,R.color.blue_grey),
-                ContextCompat.getColor(context,R.color.colorPrimaryDark)
+                ContextCompat.getColor(context,R.color.black)
         )
 
 
     }
 
-    fun  setBrushWidth(width: Int) {
-        brush.paint.strokeWidth = width.toFloat()
+    fun  setBrushWidth(width: Float) {
+        brush.paint.strokeWidth = width
     }
 
-    fun getBrushWidth() : Int {
-        return brush.paint.strokeWidth.toInt()
+    fun getBrushWidth() : Float {
+        return brush.paint.strokeWidth
     }
 
     fun  bitMapToByteArray(bitmap: Bitmap?): ByteArray? {

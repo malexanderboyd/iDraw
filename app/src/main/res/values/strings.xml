@@ -15,4 +15,9 @@
     <string name="quote_4">You can do anything you want to do. This is your world.</string>
     <string name="quote_5">Perhaps paint some happy little trees?</string>
     <string name="title_activity_main2">Main2Activity</string>
+
+
+
+
+    <string name="accessibility_brush_width_desc">Brush Width Circle</string>
 </resources>

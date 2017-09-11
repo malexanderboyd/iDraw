@@ -90,16 +90,20 @@ class PaintCanvas(context : Context, attributes : AttributeSet) : View(context, 
         invalidate()
     }
 
-    fun  setBrushWidth(width: Int) {
+    fun  setBrushWidth(width: Float) {
         viewModel.setBrushWidth(width)
     }
 
-    fun  getCurrentBrushSize(): Int {
+    fun  getCurrentBrushSize(): Float {
         return viewModel.getBrushWidth()
     }
 
     fun  saveBitMap(bitmap: Bitmap?) : ByteArray? {
        return viewModel.bitMapToByteArray(bitmap)
+    }
+
+    fun  getPaint(): Paint? {
+        return viewModel.getPaint()
     }
 
 
