@@ -21,9 +21,15 @@ class PaintCanvas(context : Context, attributes : AttributeSet) : View(context, 
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
-        // each pixel is stored on 4 bytes
-        bitMap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
-        canvas = Canvas(bitMap)
+        if(bitMap == null) {
+            // each pixel is 4 bytes
+            bitMap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+            canvas = Canvas(bitMap)
+        } else {
+            bitMap = Bitmap.createScaledBitmap(bitMap, w, h, true)
+            canvas = Canvas(bitMap)
+            canvas.drawBitmap(bitMap, 0f, 0f, bitMapPaint)
+        }
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -62,6 +68,11 @@ class PaintCanvas(context : Context, attributes : AttributeSet) : View(context, 
         return true
     }
 
+    fun drawSavedBitMap(bitmap : Bitmap) {
+       bitMap = bitmap
+    }
+
+
     fun  setPaintColor(color: Int) {
         viewModel.setPaintColor(color)
     }
@@ -85,6 +96,10 @@ class PaintCanvas(context : Context, attributes : AttributeSet) : View(context, 
 
     fun  getCurrentBrushSize(): Int {
         return viewModel.getBrushWidth()
+    }
+
+    fun  saveBitMap(bitmap: Bitmap?) : ByteArray? {
+       return viewModel.bitMapToByteArray(bitmap)
     }
 
 

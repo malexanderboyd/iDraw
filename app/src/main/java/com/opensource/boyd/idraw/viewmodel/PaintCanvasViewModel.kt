@@ -2,12 +2,15 @@ package com.opensource.boyd.idraw.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.content.Context
+import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.support.v4.content.ContextCompat
 import com.opensource.boyd.idraw.R
 import com.opensource.boyd.idraw.model.Brush
+import java.io.ByteArrayOutputStream
+import java.io.FileOutputStream
 
 /**
  * Created by Boyd on 9/8/2017.
@@ -80,7 +83,8 @@ class PaintCanvasViewModel : ViewModel() {
                 ContextCompat.getColor(context,R.color.deep_orange),
                 ContextCompat.getColor(context,R.color.brown),
                 ContextCompat.getColor(context,R.color.grey),
-                ContextCompat.getColor(context,R.color.blue_grey)
+                ContextCompat.getColor(context,R.color.blue_grey),
+                ContextCompat.getColor(context,R.color.colorPrimaryDark)
         )
 
 
@@ -92,6 +96,15 @@ class PaintCanvasViewModel : ViewModel() {
 
     fun getBrushWidth() : Int {
         return brush.paint.strokeWidth.toInt()
+    }
+
+    fun  bitMapToByteArray(bitmap: Bitmap?): ByteArray? {
+        bitmap?.let {
+            val byteStream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteStream)
+            return byteStream.toByteArray()
+        }
+        return null
     }
 
 }
