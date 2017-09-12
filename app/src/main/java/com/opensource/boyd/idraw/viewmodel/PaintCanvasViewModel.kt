@@ -82,7 +82,7 @@ class PaintCanvasViewModel : ViewModel() {
                 ContextCompat.getColor(context,R.color.orange),
                 ContextCompat.getColor(context,R.color.deep_orange),
                 ContextCompat.getColor(context,R.color.brown),
-                ContextCompat.getColor(context,R.color.grey),
+                ContextCompat.getColor(context,R.color.white),
                 ContextCompat.getColor(context,R.color.blue_grey),
                 ContextCompat.getColor(context,R.color.black)
         )

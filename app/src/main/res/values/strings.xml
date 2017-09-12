@@ -9,6 +9,8 @@
     <string name="options_title">Drawing Options</string>
     <string name="color_picker_title">Choose your color</string>
     <string name="brush_width_change_title">Modify Brush Width</string>
+    <string name="dialog_clear_canvas">Clear Canvas?</string>
+    <string name="dialog_are_you_sure">Are you sure you want to clear the canvas?</string>
     <string name="quote_1">We don\'t make mistakes. We have happy accidents.</string>
     <string name="quote_2">No pressure. Just relax and watch it happen.</string>
     <string name="quote_3">Every day is a good day when you paint.</string>

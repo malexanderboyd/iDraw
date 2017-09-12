@@ -187,9 +187,20 @@ class MainActivity : LifecycleActivity(), ColorPickerSwatch.OnColorSelectedListe
         }
 
         options.clearCanvasBtn.setOnClickListener { _ ->
-            canvas.clearCanvas()
-            prompt_text.visibility = View.INVISIBLE
-            toolbar.menu.getItem(0)?.isChecked = false
+            val alert = AlertDialog.Builder(this)
+                    .setTitle(R.string.dialog_clear_canvas)
+                    .setPositiveButton(android.R.string.yes) {
+                    dialog, whichButton ->
+                        canvas.clearCanvas()
+                        prompt_text.visibility = View.INVISIBLE
+                        toolbar.menu.getItem(0)?.isChecked = false
+                    }
+                    .setNegativeButton(android.R.string.no) {
+                     dialog, whichButton -> dialog.dismiss()
+                    }
+                    .setMessage(R.string.dialog_are_you_sure)
+                    .create()
+            alert.show()
         }
 
         options.modifyBrushWidthBtn.setOnClickListener { _ ->
